@@ -96,6 +96,10 @@ WORK_HOUR_END   = 23
 - 通过 AppleScript (macOS) / UIAutomation (Windows) 操控悟空AI桌面 App
 - 浏览器使用持久化上下文，登录态自动保存
 
+## 相关项目
+
+**[OpenRelay](https://github.com/romgX/openrelay)** — 几百个免费 AI 模型配额，一键接入本地项目。把 Claude Pro、Kiro、Groq、Gemini 等所有 AI 配额聚合到一个端点，驱动 Claude Code、Cursor、Aider 等任意工具。
+
 ## License
 
 MIT
