@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.wukong_browser/
+page_full.png
+page_after_skip.png
+page_top.png
