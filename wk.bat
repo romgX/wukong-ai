@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul 2>&1
-title 悟空邀请码自动抢码工具
+title 悟空AI邀请码自动抢码工具
 setlocal EnableDelayedExpansion
 
 set "SCRIPT_DIR=%~dp0"
@@ -8,7 +8,7 @@ set "VENV_DIR=%SCRIPT_DIR%.venv"
 set "PY_SCRIPT=%SCRIPT_DIR%grab_code.py"
 
 echo ============================================
-echo   悟空邀请码自动抢码工具
+echo   悟空AI邀请码自动抢码工具
 echo   关闭此窗口自动停止
 echo ============================================
 

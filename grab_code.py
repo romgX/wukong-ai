@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-悟空邀请码自动抢码工具 (macOS / Windows 双平台)
+悟空AI邀请码自动抢码工具 (macOS / Windows 双平台)
 
 用法:
   pip install playwright && playwright install chromium
@@ -82,7 +82,7 @@ Write-Output ($lines -join "|||")
             return ""
 
     def _find_wukong_window():
-        """用 PowerShell 查找悟空窗口，返回窗口句柄"""
+        """用 PowerShell 查找悟空AI窗口，返回窗口句柄"""
         ps = '''
 Add-Type -AssemblyName UIAutomationClient
 Add-Type -AssemblyName UIAutomationTypes
@@ -115,7 +115,7 @@ Add-Type -AssemblyName UIAutomationClient
 Add-Type -AssemblyName UIAutomationTypes
 $root = [System.Windows.Automation.AutomationElement]::RootElement
 
-# 查找悟空窗口
+# 查找悟空AI窗口
 $procs = Get-Process | Where-Object { $_.ProcessName -match "Wukong|DingTalk" -and $_.MainWindowHandle -ne 0 }
 $win = $null
 foreach ($proc in $procs) {
@@ -145,7 +145,7 @@ if ($edit -ne $null) { Write-Output "ready" } else { Write-Output "no_input" }
         if out == "ready":
             return {"running": True, "ready": True, "msg": "App 就绪，输入框可用"}
         elif out == "no_process":
-            return {"running": False, "ready": False, "msg": "悟空 App 未启动"}
+            return {"running": False, "ready": False, "msg": "悟空AI App 未启动"}
         elif out == "no_input":
             return {"running": True, "ready": False, "msg": "未找到邀请码输入框"}
         else:
@@ -158,7 +158,7 @@ Add-Type -AssemblyName UIAutomationTypes
 Add-Type -AssemblyName System.Windows.Forms
 $root = [System.Windows.Automation.AutomationElement]::RootElement
 
-# 查找悟空窗口
+# 查找悟空AI窗口
 $procs = Get-Process | Where-Object {{ $_.ProcessName -match "Wukong|DingTalk" -and $_.MainWindowHandle -ne 0 }}
 $win = $null; $hwnd = 0
 foreach ($proc in $procs) {{
@@ -294,7 +294,7 @@ print("|||".join(parts))
     def check_wukong_app() -> dict:
         r = subprocess.run(["pgrep", "-f", "Wukong.app"], capture_output=True)
         if r.returncode != 0:
-            return {"running": False, "ready": False, "msg": "悟空 App 未启动"}
+            return {"running": False, "ready": False, "msg": "悟空AI App 未启动"}
         script = '''
         tell application "System Events"
             if not (exists process "DingTalkReal") then return "no_process"
@@ -578,7 +578,7 @@ async def main():
 
 if __name__ == "__main__":
     print("=" * 50)
-    print("  悟空邀请码自动抢码工具 (macOS / Windows)")
+    print("  悟空AI邀请码自动抢码工具 (macOS / Windows)")
     print("  整点前2分钟自动检查 App，整点开始抢码")
     print("  注册成功后自动退出")
     print("  Ctrl+C 停止")
