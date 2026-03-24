@@ -36,16 +36,16 @@
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/romgX/wukong.git
-cd wukong
+git clone https://github.com/romgX/wukong-ai.git
+cd wukong-ai
 bash wk.sh
 ```
 
 ### Windows
 
 ```
-git clone https://github.com/romgX/wukong.git
-cd wukong
+git clone https://github.com/romgX/wukong-ai.git
+cd wukong-ai
 双击 wk.bat
 ```
 
